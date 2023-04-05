@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.epam.secondservicetask;
+
+service PingPongService {
+  rpc respondWithPong(PingRequest) returns (PongResponse);
+}
+
+message PingRequest {
+  int64 id = 1;
+  string message = 2;
+  int64 timeMillis = 3;
+}
+
+message PongResponse {
+  int64 id = 1;
+  string message = 2;
+  int64 timeMillis = 3;
+  Billy gachi = 4;
+}
+
+message Billy {
+  string surname = 1;
+}
